@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0px;
+    background: #FFF;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background: #FFF;
+    height: 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 2em;
+    padding-right: 2em;
+    z-index: 1000;
+}
+
+nav {
+    margin: 0em 0em 0 auto;
+}
+
+nav ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   
+}
+ 
+nav ul li {
+   float: left;
+}
+ 
+nav ul li a {
+   display: block;
+   text-align: center;
+   text-decoration: none;
+   cursor: pointer;
+   padding: 1.8em;
+   font-size: 1.2em;
+}
+ 
+
+h1 {
+    color: #FFF;
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2em;
+    color: #659922;
+}
+
+h3 {
+    color: #FFF;
+    font-size: 2em;
+    line-height: 1.6;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.titulo {
+    font-size: 2em;
+    color: #659922;
+}
+
+section {
+    height: 100vh;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.fundo-sc1 {
+    top:0;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(49.23deg, #35B0CF 44.88%, #577ABC 115.43%);
+}
+
+/* SECAO PRINCIPAL */ 
+
+.sc-principal {
+   display: grid;
+   padding-left: 0;
+   padding-right: 0;
+   font-size: 1em;
+}
+
+.sc-principal .wrapper-texto {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.sc-principal > header:nth-child(1) > img:nth-child(1) {
+    width: 390px;
+    margin-left: 7em;
+    margin-top: 0.3em;
+}
+   
+.sc-principal .texto {
+    padding-left: 10em;
+    padding-top: 4em;
+    padding-right: 5em;
+}
+   
+.sc-tratameto {
+    background: #FFF;
+}
+.quadrado {
+    width: 20em;
+    height: 20em;
+}
+
+.quadrado1 {
+    background-color: #2AB1AD;
+    margin-top: 7em;
+}
+
+.quadrado2 {
+    background: #59B0D2;
+    margin-left:20em;
+}
+
+.posicao-fundo {
+    position: absolute;
+}
+
+.icone-circulo {
+    left: 885px;
+    top: 195px;
+}
+
+.icone-cadeira {
+    z-index: 1;
+    padding: 50px;
+}
+
+.icone-corredor {
+    z-index: 1;
+    padding: 27px;
+}
+
+.onda {
+    bottom: 0;
+    width: 100%;
+}
+/* COMUM A TODAS AS SECTIONS*/
+.objetivos  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.objetivos li {
+    border: 1px solid #CCC;
+    min-width: 100px;
+    min-height: 100px;
+    list-style: none;
+}
+
+/* SECAO OSTEOPATIA */
+.sc-tratamento-osteopatia {
+    display: grid;
+    background-color: #FFF;
+    padding-left: 10em;
+}
+
+.titulo-tratamentos {
+    text-align: center;
+    margin: 1.5em 0;
+}
+
+.titulo-osteopatia {
+    color: #5D7FC0;
+}
+
+.osteopatia-texto,
+.fisioterapia-texto {
+    font-size: 2em;
+    line-height: 1;
+}
+
+.img-osteo,
+.img-fisio {
+    height: 250px;
+    width: 300px;
+}
+
+.resumo-osteo, 
+.resumo-fisio {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 2em 0px;
+}
+
+
+/*  SECAO FISIOTERAPIA */
+.sc-tratamento-fisioterapia {
+    display: grid;
+    background-color: #FFF;
+}
+
+.titulo-fisioterapia {
+    color: #29C3BE;
+}
+
+/*  SECAO PROFISSIONAL */
+.sc-profissional {
+    display: grid;
+    background-color: yellow;
+}
+
+/*  SECAO LOCALIZACAO */
+#map {
+  height: 400px;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
+ }
+.sc-localizacao {
+    display: grid;
+    background: #29C3BE;
+    grid-template-columns: 1fr;
+}
+
+.caixa-endereco {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.endereco-logradouro {
+    font-size: 2em;
+    color: white;
+}
+
+.endereco-observacao {
+    font-size:1.5em;
+    color: #5D62B5;
+}
+
+/* SECAO CONTATO */
+
+.sc-contato {
+    display: grid;
+    background: #29C3BE;
+    grid-template-columns: 1fr 1fr;
+    background-image: url("../img/contatobackground1.png");
+}
+
+.caixa-mensagem {
+    border-radius: 10px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    background-color: #5D62B5;
+    max-width: 400px;
+    max-height: 400px;
+    padding: 15px;
+    box-shadow: 0px 16px 24px rgba(38, 38, 38, 0.2), 0px 8px 16px rgba(38, 38, 38, 0.24);
+}
+
+.caixa-mensagem input {
+    border: 1px solid white;
+    color: white;
+    background: #5D62B5;
+    border-radius: 4px;
+    padding: 5px;
+    
+}
+
+.caixa-mensagem .caixa-titulo {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.caixa-mensagem button {
+    background: #F2726F;
+    color: white;
+    border: none;
+    padding: 0.6em;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.caixa-mensagem button:hover {
+    background: rgba(122, 63, 112, 0.699);
+}
+
+.side-mensagem {
+    color: white;
+    text-align: center;
+}
+
+.side-titulo {
+    font-size: 4em;
+    font-weight: bold;
+    margin-top: 3em;
+}
+
+.side-sub-titulo {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 4em;
+    
+}
+
+
+
+
+
+/* BOTÃO ANIMADO */
+
+.btn-contato {
+    border: none;
+    background: white;
+    border-radius: 2em;
+    width: 18em;
+    height: 3em;
+    margin-top: 2em;
+    cursor: pointer;
+}
+
+.button {
+    margin-top: 2em;
+    min-width: 300px;
+    min-height: 60px;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #FFF;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+  
+  .button::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .button:hover, .button:focus {
+    color: white;
+    transform: translateY(-6px);
+  }
+  
+  .button:hover::before, button:focus::before {
+    opacity: 1;
+  }
+  
+  .button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s;
+  }
+  
+  .button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
