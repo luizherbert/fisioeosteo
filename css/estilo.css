@@ -10,6 +10,11 @@ html {
     box-sizing: inherit;
 }
 
+::placeholder {
+    color: white;
+}
+
+
 body {
     margin: 0px;
     background: #FFF;
@@ -256,7 +261,7 @@ section {
 .sc-contato {
     display: grid;
     background: #29C3BE;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     background-image: url("../img/contatobackground1.png");
 }
 
@@ -319,7 +324,58 @@ section {
     
 }
 
+.fale-conosco {
+    border: none;
+    border-radius: 20px;
+    background: #5D62B5;
+    height: 120px;
+    color: white;
+    font-size: 3em;
+    width: 70%;
+    margin-top: -60px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
+.fale-conosco span {
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.icone-whatsapp {
+    height: 80px;
+    margin-top: 20px;
+    margin-left: 50px;
+    display: inline-block;
+}
+
+/* RODAPE */
+
+footer {
+    background: #FFF;
+    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4em;
+    font-size: 1.5em;
+    line-height: 2.4;
+    font-weight: bold;
+    margin-left: 10rem;
+    margin-top: 5rem;
+}
+
+.rodape-logo { 
+    height: 40px;
+    display: block;
+}
+
+.rodape-barra {
+    background: #363740;
+    margin-left: -10rem;
+    grid-area: 2 / 1 / last-line / last-column;
+
+}
 
 
 
@@ -357,7 +413,7 @@ section {
     }
   
   .button::before {
-  content: '';
+    content: '';
     border-radius: 1000px;
     min-width: calc(300px + 12px);
     min-height: calc(60px + 12px);
