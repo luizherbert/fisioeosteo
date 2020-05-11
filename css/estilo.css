@@ -124,9 +124,16 @@ section {
     padding-right: 5em;
 }
    
-.sc-tratameto {
-    background: #FFF;
+.sc-tratamento-osteopatia {
+    background-image: url("../img/fundo-sc2.svg");
+    background-size: cover;
 }
+
+.sc-tratamento-fisioterapia {
+    background-image: url("../img/fundo-sc3.svg");
+    background-size: cover;
+}
+
 .quadrado {
     width: 20em;
     height: 20em;
@@ -242,18 +249,21 @@ section {
 }
 
 .caixa-endereco {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+    display: flex;
+    align-items: center;
+
 }
 
-.endereco-logradouro {
-    font-size: 2em;
+.caixa-endereco .endereco-logradouro {
+    font-size: 3em;
     color: white;
+    margin-left: 3rem;
 }
 
-.endereco-observacao {
-    font-size:1.5em;
+.caixa-endereco .endereco-observacao {
+    font-size:2em;
     color: #5D62B5;
+    margin-left: 3rem;
 }
 
 /* SECAO CONTATO */
@@ -266,13 +276,14 @@ section {
 }
 
 .caixa-mensagem {
+    margin-top: -150px;
     border-radius: 10px;
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1em;
     background-color: #5D62B5;
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 600px;
+    max-height: 600px;
     padding: 15px;
     box-shadow: 0px 16px 24px rgba(38, 38, 38, 0.2), 0px 8px 16px rgba(38, 38, 38, 0.24);
 }
@@ -283,6 +294,7 @@ section {
     background: #5D62B5;
     border-radius: 4px;
     padding: 5px;
+    font-size: 2em;
     
 }
 
@@ -290,7 +302,7 @@ section {
     color: white;
     text-align: center;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 .caixa-mensagem button {
@@ -300,6 +312,7 @@ section {
     padding: 0.6em;
     cursor: pointer;
     transition: 0.3s all;
+    font-size: 2em;
 }
 
 .caixa-mensagem button:hover {
@@ -325,7 +338,10 @@ section {
 }
 
 .fale-conosco {
+    display: flex;
     border: none;
+    padding-left: 40px;
+    text-align: center;
     border-radius: 20px;
     background: #5D62B5;
     height: 120px;
@@ -336,6 +352,7 @@ section {
     margin-right: auto;
     margin-left: auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
 }
 
 .fale-conosco span {
@@ -348,6 +365,11 @@ section {
     margin-top: 20px;
     margin-left: 50px;
     display: inline-block;
+}
+
+.wrapper-mensagem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 /* RODAPE */
@@ -381,15 +403,6 @@ footer {
 
 /* BOTÃO ANIMADO */
 
-.btn-contato {
-    border: none;
-    background: white;
-    border-radius: 2em;
-    width: 18em;
-    height: 3em;
-    margin-top: 2em;
-    cursor: pointer;
-}
 
 .button {
     margin-top: 2em;
@@ -410,7 +423,7 @@ footer {
     outline: none;
     position: relative;
     padding: 10px;
-    }
+  }
   
   .button::before {
     content: '';
