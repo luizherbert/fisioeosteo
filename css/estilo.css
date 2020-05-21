@@ -32,6 +32,10 @@ header {
     z-index: 1000;
 }
 
+iframe {
+    width: 100% !important;
+}
+
 nav {
     margin: 0em 0em 0 auto;
 }
