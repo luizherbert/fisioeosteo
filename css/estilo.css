@@ -94,8 +94,8 @@ section {
     height: 100vh;
     width: 100%;
     position: absolute;
-    z-index: -1;
-    background: linear-gradient(49.23deg, #35B0CF 44.88%, #577ABC 115.43%);
+    
+    
 }
 
 /* SECAO PRINCIPAL */ 
@@ -105,6 +105,7 @@ section {
    padding-left: 0;
    padding-right: 0;
    font-size: 1em;
+   background: linear-gradient(49.23deg, #35B0CF 44.88%, #577ABC 115.43%);
 }
 
 .sc-principal .wrapper-texto {
@@ -234,7 +235,48 @@ section {
 /*  SECAO PROFISSIONAL */
 .sc-profissional {
     display: grid;
-    background-color: yellow;
+    grid-template-columns: 2fr 1fr;
+    color: #FFF;
+    background: linear-gradient(49.23deg, #35B0CF 44.88%, #577ABC 115.43%);
+    font-size: 2em;
+    /* background-image: url("../img/fundo-sc1.svg"); */
+}
+
+.titulo-profissional {
+    margin-top: 1.8em;
+    font-size: 3em;
+    color: #fff;
+}
+
+.crefito {
+    margin: 0.3em 0;
+}
+
+.dados-profissional {
+    margin-right: 2em;
+}
+.wrapper-profissional {
+    background: #5AD6C9;
+    margin: 3em auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-profissional {
+    font-size: 2em;
+    color: #FFF;
+}
+
+.crefito {
+    color: #317696;
+}
+
+.imagem-profissional {
+    margin-top: 4.3em;
+    width: 20em;
+    background: #59B0D2;
+    padding: 2em;
 }
 
 /*  SECAO LOCALIZACAO */
@@ -347,7 +389,7 @@ section {
     height: 120px;
     color: white;
     font-size: 3em;
-    width: 70%;
+    width: 60%;
     margin-top: -60px;
     margin-right: auto;
     margin-left: auto;
