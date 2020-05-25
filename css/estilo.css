@@ -525,3 +525,92 @@ footer {
       opacity: 0;
     }
   }
+
+  @media only screen and (max-width: 600px) {
+
+    .sc-principal {
+        display: inherit;
+    }
+
+    .sc-principal .wrapper-texto {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .sc-principal .texto {
+        padding: 1em;
+    }
+
+    .resumo-osteo, 
+    .resumo-fisio {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .sc-principal > header:nth-child(1) > img:nth-child(1) {
+        width: 390px;
+        margin-left: 1em;
+        margin-top: 0.3em;
+    }
+    .efeito-quadrado {
+        display: none;
+    }
+
+    section {
+        height: 100%;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    
+    .sc-tratamento-osteopatia {
+        padding-left: 1em;
+    }
+
+    .sc-profissional {
+        display: inherit;
+        height: 100%;
+    }
+
+    .titulo-profissional {
+        font-size: 2em;
+        }
+    
+    .imagem-profissional {
+        margin-top: 4.3em;
+        width: 100%;
+        background: #59B0D2;
+        padding: 2em;
+    }
+
+    .side-mensagem {
+        display: none;
+    }
+
+    .caixa-endereco {
+        font-size: 8px;
+    }
+    .sc-contato, .wrapper-mensagem {
+        display: inherit;
+    }
+
+    .fale-conosco {
+        display: inherit;
+        margin: 0;
+        padding-left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .icone-whatsapp {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    .caixa-mensagem {
+        margin-top: 20px;
+    }
+
+    footer {
+        margin-left: 2em;
+    }
+
+  }
