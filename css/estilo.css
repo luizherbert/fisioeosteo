@@ -527,6 +527,9 @@ footer {
   }
 
   @media only screen and (max-width: 600px) {
+    nav {
+        display: none;
+    }
 
     .sc-principal {
         display: inherit;
@@ -568,6 +571,11 @@ footer {
     .sc-profissional {
         display: inherit;
         height: 100%;
+    }
+
+    .nome-profissional {
+        font-size: 1em;
+        color: #FFF;
     }
 
     .titulo-profissional {
