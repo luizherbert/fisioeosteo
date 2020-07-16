@@ -7,15 +7,14 @@
   <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
 </head>
-<body>
-  
-  <main>
+<body data-barba="wrapper">
+  <main id="app" data-barba="container" data-barba-namespace="home">
     <section class="sc-principal">
       <header>
         <img src="img/logotexto.svg">
         <nav>
           <ul>
-            <li> <a id="lnkTratamento">  Tratamentos</a> </li>
+            <li> <a id="lnkTratamento">Tratamentos</a> </li>
             <li> <a id="lnkProfissional">A profissional</a> </li>
             <li> <a id="lnkLocalizacao">Onde estamos</a> </li>
             <li> <a id="lnkContato">Entre em contato</a> </li>
@@ -25,10 +24,6 @@
       <div class="wrapper-texto">
        
         <img src="img/circulo.svg" class="posicao-fundo icone-circulo">
-        <!-- <img src="img/circulo-blur.svg" class="posicao-fundo icone-circulo-blur">
-        <img src="img/circulo-superior-esquerdo.svg" class="posicao-fundo icone-circulo-superior-esquerdo">
-        <img src="img/circulo-superior.svg" class="posicao-fundo icone-circulo-superior">
-        <img src="img/circulo-inferior.svg" class="posicao-fundo icone-circulo-inferior">-->
         <img src="img/onda.svg" class="posicao-fundo onda"> 
         <img src="img/fundo-sc1.svg" class="fundo-sc1">
 
@@ -67,7 +62,7 @@
               no aspecto Biopsicossocial.
             </p>
             
-            <button class="button">Saiba Mais</button>
+            <button id="btnSaibaMaisOsteo" class="button">Saiba Mais</button>
           </div>
           
         </div>
@@ -122,7 +117,7 @@
               O tratamento é focado no indivíduo e não na doença, o objetivo da fisioterapia é fazer com que tarefas 
               e atividades diárias se tornem mais fáceis
             </p>
-            <button class="button">Saiba Mais</button>
+            <button id="btnSaibaMaisFisio" class="button">Saiba Mais</button>
           </div>
         </div>
         <!-- <div class="titulo titulo-objetivo"> Objetivos </div>
@@ -166,12 +161,12 @@
     <section class="sc-localizacao">
       <!-- <div id="map"></div> -->
       <iframe
-  width="600"
-  height="450"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBb3tfi70Pf2EXnKHlZssUMWOZfnBWqAME
-    &q=www.fisioeosteo.com.br" allowfullscreen>
-</iframe>
+                width="600"
+                height="450"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBb3tfi70Pf2EXnKHlZssUMWOZfnBWqAME
+                  &q=www.fisioeosteo.com.br" allowfullscreen>
+      </iframe>
       <div class="caixa-endereco">
         <img src="img/icon-casa.svg">
         <div class="endereco">
@@ -204,12 +199,38 @@
 
         <div class="caixa-mensagem">
           <div class="caixa-titulo">Marque uma avaliação </div>
-          <input type="text" placeholder="Nome">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Fone">
-          <input type="text" placeholder="Data pretendida">
-          <input type="text" value="Oi! Gostaria de agendar uma avaliação">
+          <form>
+            <!-- NOME -->
+            <fieldset>
+              <input id="nome" name="nome" type="text" autocomplete="off" required="" class="form-control">
+              <label for="nome">Nome</label>
+            </fieldset>
 
+            <!-- EMAIL -->
+            <fieldset>
+              <input id="email" name="email" type="text" autocomplete="off" required class="form-control">
+              <label for="email">Email</label>
+            </fieldset>
+
+            <!-- TELEFONE -->
+            <fieldset>
+              <input id="telefone" name="telefone" type="text" autocomplete="off" required class="form-control">
+              <label for="telefone">Telefone</label>
+            </fieldset>
+
+            <!-- DATA PRETENDIDA -->
+            <fieldset>
+              <input id="datapretendida" name="nome" type="text" autocomplete="off" required="" class="form-control">
+              <label for="datapretendida">Data Pretendida</label>
+            </fieldset>
+
+            <!-- MENSAGEM -->
+            <fieldset>
+              <input id="mensagem" name="mensagem" type="text" autocomplete="off" required="" class="form-control">
+              <label for="mensagem">Mensagem</label>
+            </fieldset>
+
+          </form>
           <button class="btn-avaliacao">Marcar avaliação</button>
         </div>
       </div>
@@ -240,6 +261,12 @@
 
   <!-- BARBA JS -->
   <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+
+  <!--VUE -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+  
+  <!--MODERNIZR -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js" integrity="sha256-ffw+9zwShMev88XNrDgS0hLIuJkDfXhgyLogod77mn8=" crossorigin="anonymous"></script>
 
   <script src="js/principal.js"></script>
 </body>

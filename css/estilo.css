@@ -45,7 +45,6 @@ nav ul {
    margin: 0;
    padding: 0;
    overflow: hidden;
-   
 }
  
 nav ul li {
@@ -60,7 +59,25 @@ nav ul li a {
    padding: 1.8em;
    font-size: 1.2em;
 }
- 
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 1px solid transparent;
+    transition: 0.5s all;
+}
+
+nav ul li a:hover::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    background: #000;
+    color: #000;
+    border: 1px solid #000;
+} 
 
 h1 {
     color: #FFF;
@@ -319,6 +336,48 @@ section {
     background: #29C3BE;
     grid-template-columns: 1fr;
     background-image: url("../img/contatobackground1.png");
+}
+
+
+form fieldset {
+    border:none;
+    position:relative;
+}
+
+input.btn-primary {
+    background-color:#51A2DA;
+    border-color:#51A2DA;
+}
+
+form fieldset input {
+  padding:25px 12px 6px 12px !important;
+  height:45px !important;
+  border:none !important;
+  box-shadow:none !important;
+  border-bottom:solid 1px #dedede !important;
+  width: 100%;
+}
+
+form fieldset label {
+  position: absolute;
+  font-size: 2em;
+  top: 13px;
+  left: 13px;
+  color: #FFF;
+    font-weight:300;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+
+}
+
+form fieldset input:valid + label, form fieldset input:focus + label {
+  color: #51A2DA;
+  font-weight: 700;
+  font-size: 12px;
+  -webkit-transform: translate3d(0, -10px, 0);
+          transform: translate3d(0, -10px, 0);
 }
 
 .caixa-mensagem {
