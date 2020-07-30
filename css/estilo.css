@@ -116,7 +116,10 @@ section {
     width: 100%;
     position: absolute;
     
-    
+}
+
+@supports (-ms-ime-align:auto) {
+    .fundo-sc1{ padding-top: 60px; } 
 }
 
 /* SECAO PRINCIPAL */ 
@@ -431,6 +434,7 @@ form fieldset input:valid + label, form fieldset input:focus + label {
 
 .caixa-mensagem .btn-avaliacao {
     height: 3em;
+    width: 100%;
 }
 
 .caixa-mensagem button:hover {
@@ -650,8 +654,9 @@ footer {
     height: 105px;
     -webkit-transition: height 0.6s, width 0.6s;
     transition: height 0.6s, width 0.6s;
-    float: left;
     left: 23px;
+    z-index: 0;
+    display: inline-block;
   }
   
   .conteudo-modal {
