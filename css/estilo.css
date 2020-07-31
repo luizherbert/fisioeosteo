@@ -32,6 +32,13 @@ header {
     z-index: 1000;
 }
 
+h4 {
+    text-transform: uppercase;
+	background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 iframe {
     width: 100% !important;
 }
@@ -119,7 +126,7 @@ section {
 }
 
 @supports (-ms-ime-align:auto) {
-    .fundo-sc1{ padding-top: 60px; } 
+    .fundo-sc1{ margin-top: 60px; } 
 }
 
 /* SECAO PRINCIPAL */ 
@@ -664,7 +671,7 @@ footer {
       position: absolute;
       top: 105px;
       left: 100px;
-      width: 700px;
+      width: 80%;
       color: white;
       z-index: 10;
       border: none;
@@ -705,6 +712,11 @@ footer {
 
   
   @media only screen and (max-width: 600px) {
+
+    header {
+        padding: 0;
+    }
+
     nav {
         display: none;
     }
@@ -736,6 +748,10 @@ footer {
         display: none;
     }
 
+    .icone-circulo {
+        display: none;
+    }
+
     section {
         height: 100%;
         padding-left: 1em;
@@ -749,6 +765,19 @@ footer {
     .sc-profissional {
         display: inherit;
         height: 100%;
+    }
+
+    .objetivos {
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+
+    .modal { 
+        left: 0;
+    }
+
+    .conteudo-modal {
+        left: 14%;
     }
 
     .nome-profissional {
@@ -796,6 +825,7 @@ footer {
     }
 
     footer {
+        display: block;
         margin-left: 2em;
     }
 
