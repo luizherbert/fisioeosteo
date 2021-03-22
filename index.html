@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fisio&Osteo</title>
   <link rel="icon" href="img/Logo.jpg" type="image/icon type">
-  <link rel="stylesheet" type="text/css" href="css/estilo.css">
-
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">   
+  
 </head>
 <body data-barba="wrapper">
   <main id="app" data-barba="container" data-barba-namespace="home">
@@ -251,7 +251,7 @@
 
         
       </div>
-      <img class="imagem-profissional" src="img/profissional.jpeg">
+      <img class="imagem-profissional" loading="lazy" src="img/profissional.jpeg">
     </section>
 
     <section class="sc-localizacao">
@@ -290,6 +290,10 @@
           </div>
           <div class="side-sub-titulo"> 
             Responderemos em breve
+            <div class="comunicado">
+              <p class="comunicado-subtitulo">A <span class="destaque-1">fisioterapia</span> é <span class="destaque-2">serviço essencial</span></p>
+              <p class="comunicado-conteudo">Estamos atendendo no período da <span class="destaque-3">fase emergencial</span>, seguindo todas as normas de higienização e segurança para a proteção do profissional e do paciente.</p>
+            </div>
           </div>
         </div>
 
@@ -315,10 +319,10 @@
             </fieldset>
 
             <!-- DATA PRETENDIDA -->
-            <fieldset>
+            <!-- <fieldset>
               <input id="datapretendida" name="nome" type="text" autocomplete="off" required="" class="form-control">
               <label for="datapretendida">Data Pretendida</label>
-            </fieldset>
+            </fieldset> -->
 
             <!-- MENSAGEM -->
             <fieldset>
@@ -337,18 +341,22 @@
   <footer>
      <div class="rodape-empresa">
        <img src="img/logotexto.svg" class="rodape-logo">
-       <span> A Fisio&Osteo esta nas redes sociais, siga-nos lá</span>
-       <p>
-        <a href="https://www.facebook.com/solangesidney-104129704644139/"> <img src="img/facebook-icon.svg"></a>
-        <a href="https://www.instagram.com/solangesidney/"> <img src="img/instagram-icon.svg"></a>
-        </p>
+       <span> Um espaço terapêutico que busca bem estar, equilíbrio, saúde (auto-cura) dentro de uma visão do Ser humano</span>
      </div>
      <div class="rodape-contato">
-      <div class="rodape-endereco-logradouro">Avenida mascote, 1034 - Vila Mascote - São Paulo - SP</div>
-      <div class="rodape-telefone-logradouro">55 (11) 96350-0980 </div>
+      <div class="rodape-endereco-logradouro"><img src="img/rodape-localizacao.svg"/> Avenida mascote, 1034 - Vila Mascote - São Paulo - SP</div>
+      <div class="rodape-telefone-logradouro"><img src="img/rodape-telefone.svg"/>55 (11) 96350-0980 </div>
      </div>
+     <div class="rodape-empresa">
+      <span> A Fisio&Osteo esta nas redes sociais, siga-nos lá</span>
+      <p>
+       <a href="https://www.facebook.com/solangesidney-104129704644139/"> <img class="rodape-icones-rede-social" src="img/facebook-icon.svg"></a>
+       <a href="https://www.instagram.com/solangesidney/"> <img class="rodape-icones-rede-social" src="img/instagram-icon.svg"></a>
+       </p>
+    </div>
      <div class="rodape-barra"></div>
   </footer>
+
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/ScrollToPlugin.min.js" integrity="sha256-8wRkBmLmtXSjUYJpCdlJTfajCsmvLgeUdZK2hBmcK0w=" crossorigin="anonymous"></script>
@@ -369,5 +377,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
 
   <script src="js/principal.js"></script>
+
 </body>
 </html>
