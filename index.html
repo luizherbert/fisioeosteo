@@ -299,7 +299,8 @@
 
         <div class="caixa-mensagem">
           <div class="caixa-titulo">Marque uma avaliação </div>
-          <form action="mailto:solangesidney023@gmail.com" method="post" enctype="text/plain">
+          <!-- <form action="mailto:solangesidney023@gmail.com" method="post" enctype="text/html"> -->
+          <form id="formEmail">
             <!-- NOME -->
             <fieldset>
               <input id="nome" name="nome" type="text" autocomplete="off" required="" class="form-control">
@@ -330,7 +331,7 @@
               <label for="mensagem">Mensagem</label>
             </fieldset>
 
-            <button class="btn-avaliacao">Marcar avaliação</button>
+            <button id="btnAvalicao" class="btn-avaliacao">Marcar avaliação</button>
           </form>
           
         </div>
