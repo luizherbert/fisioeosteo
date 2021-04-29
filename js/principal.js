@@ -48,7 +48,7 @@ btnAvalicao.addEventListener("click", async (e) => {
 
 	var formdata = new FormData();
 	formdata.append("apikey", "96651B7405CA78EB018B83A1B07C2C2B7326342314B571E5478D5D8AF7BCCAD26155C128F6357AB70BD7E228299A58A2");
-	formdata.append("to", "mestre0din@hotmail.com");
+	formdata.append("to", "solangesidney023@gmail.com");
 	formdata.append("from", "mestre0din@hotmail.com");
 	formdata.append("subject", "Contato via site");
 	formdata.append("bodyText", mensagemEmail);
