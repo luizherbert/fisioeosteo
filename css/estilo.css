@@ -476,7 +476,7 @@ form fieldset input:valid + label, form fieldset input:focus + label {
     height: 120px;
     color: white;
     font-size: 3em;
-    width: 60%;
+    width: 750px;
     margin-top: -60px;
     margin-right: auto;
     margin-left: auto;
