@@ -6,7 +6,9 @@ html {
     overflow-x: hidden;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -34,9 +36,9 @@ header {
 
 h4 {
     text-transform: uppercase;
-	background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 iframe {
@@ -48,23 +50,23 @@ nav {
 }
 
 nav ul {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
- 
+
 nav ul li {
-   float: left;
+    float: left;
 }
- 
+
 nav ul li a {
-   display: block;
-   text-align: center;
-   text-decoration: none;
-   cursor: pointer;
-   padding: 1.8em;
-   font-size: 1.2em;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 1.8em;
+    font-size: 1.2em;
 }
 
 nav ul li a::before {
@@ -84,7 +86,7 @@ nav ul li a:hover::before {
     background: #000;
     color: #000;
     border: 1px solid #000;
-} 
+}
 
 h1 {
     color: #FFF;
@@ -118,25 +120,27 @@ section {
 }
 
 .fundo-sc1 {
-    top:0;
+    top: 0;
     height: 100vh;
     width: 100%;
     position: absolute;
-    
+
 }
 
 @supports (-ms-ime-align:auto) {
-    .fundo-sc1{ margin-top: 60px; } 
+    .fundo-sc1 {
+        margin-top: 60px;
+    }
 }
 
-/* SECAO PRINCIPAL */ 
+/* SECAO PRINCIPAL */
 
 .sc-principal {
-   display: grid;
-   padding-left: 0;
-   padding-right: 0;
-   font-size: 1em;
-   background: linear-gradient(49.23deg, #35B0CF 44.88%, #577ABC 115.43%);
+    display: grid;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1em;
+    background: linear-gradient(49.23deg, #35B0CF 44.88%, #577ABC 115.43%);
 }
 
 .sc-principal .wrapper-texto {
@@ -144,18 +148,18 @@ section {
     grid-template-columns: 2fr 1fr;
 }
 
-.sc-principal > header:nth-child(1) > img:nth-child(1) {
+.sc-principal>header:nth-child(1)>img:nth-child(1) {
     width: 390px;
     margin-left: 7em;
     margin-top: 0.3em;
 }
-   
+
 .sc-principal .texto {
     padding-left: 10em;
     padding-top: 4em;
     padding-right: 5em;
 }
-   
+
 .sc-tratamento-osteopatia {
     background-image: url("../img/fundo-sc2.svg");
     background-size: cover;
@@ -178,7 +182,7 @@ section {
 
 .quadrado2 {
     background: #59B0D2;
-    margin-left:20em;
+    margin-left: 20em;
 }
 
 .posicao-fundo {
@@ -204,6 +208,7 @@ section {
     bottom: 0;
     width: 100%;
 }
+
 /* COMUM A TODAS AS SECTIONS*/
 .objetivos {
     list-style: none;
@@ -255,7 +260,7 @@ section {
     width: 300px;
 }
 
-.resumo-osteo, 
+.resumo-osteo,
 .resumo-fisio {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -296,6 +301,7 @@ section {
 .dados-profissional {
     margin-right: 2em;
 }
+
 .wrapper-profissional {
     background: #5AD6C9;
     margin: 3em auto;
@@ -322,9 +328,12 @@ section {
 
 /*  SECAO LOCALIZACAO */
 #map {
-  height: 400px;  /* The height is 400 pixels */
-  width: 100%;  /* The width is the width of the web page */
- }
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
 .sc-localizacao {
     display: grid;
     background: #29C3BE;
@@ -344,7 +353,7 @@ section {
 }
 
 .caixa-endereco .endereco-observacao {
-    font-size:2em;
+    font-size: 2em;
     color: #5D62B5;
     margin-left: 3rem;
 }
@@ -360,44 +369,45 @@ section {
 
 
 form fieldset {
-    border:none;
-    position:relative;
+    border: none;
+    position: relative;
     margin-bottom: 1.2em;
 }
 
 input.btn-primary {
-    background-color:#51A2DA;
-    border-color:#51A2DA;
+    background-color: #51A2DA;
+    border-color: #51A2DA;
 }
 
 form fieldset input {
-  padding:25px 12px 6px 12px !important;
-  height:45px !important;
-  box-shadow:none !important;
-  border:solid 1px #dedede !important;
-  width: 100%;
+    padding: 25px 12px 6px 12px !important;
+    height: 45px !important;
+    box-shadow: none !important;
+    border: solid 1px #dedede !important;
+    width: 100%;
 }
 
 form fieldset label {
-  position: absolute;
-  font-size: 2em;
-  top: 13px;
-  left: 20px;
-  color: #FFF;
-    font-weight:300;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
+    position: absolute;
+    font-size: 2em;
+    top: 13px;
+    left: 20px;
+    color: #FFF;
+    font-weight: 300;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
 }
 
-form fieldset input:valid + label, form fieldset input:focus + label {
-  color: #51A2DA;
-  font-weight: 700;
-  font-size: 12px;
-  -webkit-transform: translate3d(0, -10px, 0);
-          transform: translate3d(0, -10px, 0);
+form fieldset input:valid+label,
+form fieldset input:focus+label {
+    color: #51A2DA;
+    font-weight: 700;
+    font-size: 12px;
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
 }
 
 .caixa-mensagem {
@@ -419,7 +429,7 @@ form fieldset input:valid + label, form fieldset input:focus + label {
     border-radius: 4px;
     padding: 5px;
     font-size: 2em;
-    
+
 }
 
 .caixa-mensagem .caixa-titulo {
@@ -463,7 +473,7 @@ form fieldset input:valid + label, form fieldset input:focus + label {
     font-size: 2em;
     font-weight: bold;
     margin-top: 2.4em;
-    
+
 }
 
 .fale-conosco {
@@ -481,7 +491,7 @@ form fieldset input:valid + label, form fieldset input:focus + label {
     margin-right: auto;
     margin-left: auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
+
 }
 
 .fale-conosco span {
@@ -522,7 +532,7 @@ footer {
     margin-top: 5rem;
 }
 
-.rodape-logo { 
+.rodape-logo {
     height: 40px;
     display: block;
 }
@@ -534,11 +544,13 @@ footer {
 
 }
 
-.rodape-endereco-logradouro, .rodape-telefone-logradouro {
+.rodape-endereco-logradouro,
+.rodape-telefone-logradouro {
     display: flex;
 }
 
-.rodape-endereco-logradouro img, .rodape-telefone-logradouro img { 
+.rodape-endereco-logradouro img,
+.rodape-telefone-logradouro img {
     padding: 0px 14px;
 }
 
@@ -572,44 +584,47 @@ footer {
     font-weight: 700;
     color: #FFF;
     background: #4FD1C5;
-    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
     border: none;
     border-radius: 1000px;
-    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
     transition: all 0.3s ease-in-out 0s;
     cursor: pointer;
     outline: none;
     position: relative;
     padding: 10px;
-  }
-  
-  .button::before {
+}
+
+.button::before {
     content: '';
     border-radius: 1000px;
     min-width: calc(300px + 12px);
     min-height: calc(60px + 12px);
     border: 6px solid #00FFCB;
-    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    box-shadow: 0 0 60px rgba(0, 255, 203, .64);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: all .3s ease-in-out 0s;
-  }
-  
-  .button:hover, .button:focus {
+}
+
+.button:hover,
+.button:focus {
     color: white;
     transform: translateY(-6px);
-  }
-  
-  .button:hover::before, button:focus::before {
+}
+
+.button:hover::before,
+button:focus::before {
     opacity: 1;
-  }
-  
-  .button::after {
+}
+
+.button::after {
     content: '';
-    width: 30px; height: 30px;
+    width: 30px;
+    height: 30px;
     border-radius: 100%;
     border: 6px solid #00FFCB;
     position: absolute;
@@ -619,40 +634,44 @@ footer {
     transform: translate(-50%, -50%);
     animation: ring 1.5s;
     opacity: 0;
-  }
-  
-  .button:hover::after, button:focus::after {
+}
+
+.button:hover::after,
+button:focus::after {
     animation: none;
     display: none;
-  }
-  
-  @keyframes ring {
+}
+
+@keyframes ring {
     0% {
-      width: 30px;
-      height: 30px;
-      opacity: 1;
+        width: 30px;
+        height: 30px;
+        opacity: 1;
     }
+
     100% {
-      width: 300px;
-      height: 300px;
-      opacity: 0;
+        width: 300px;
+        height: 300px;
+        opacity: 0;
     }
-  }
+}
 
-  /* BOTAO ANIMADO COM SVG */
+/* BOTAO ANIMADO COM SVG */
 
-  .btn--show-overlay a {
+.btn--show-overlay a {
     color: #2e2e2e;
     text-decoration: none;
     display: block;
     padding: 4px 8px;
     transition: color .25s ease-out;
-  }
-  .btn--show-overlay a:hover, a:focus {
+}
+
+.btn--show-overlay a:hover,
+a:focus {
     color: #FFF;
-  }
-  
-  .btn {
+}
+
+.btn {
     text-align: center;
     z-index: 10;
     width: 250px;
@@ -662,28 +681,29 @@ footer {
     text-transform: uppercase;
     position: absolute;
     text-decoration: none;
-  }
-  
-  .svg-wrapper {
+}
+
+.svg-wrapper {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-  }
-  .svg-wrapper svg {
+}
+
+.svg-wrapper svg {
     width: 100%;
     height: 100%;
     overflow: hidden;
-  }
-  
-  path {
+}
+
+path {
     fill: #2e2e2e;
     stroke: #2e2e2e;
     stroke-width: 1px;
-  }
-  
-  .modal {
+}
+
+.modal {
     position: relative;
     margin: 0 auto;
     width: 250px;
@@ -693,23 +713,23 @@ footer {
     left: 23px;
     z-index: 0;
     display: inline-block;
-  }
-  
-  .conteudo-modal {
-      display:none;
-      position: absolute;
-      top: 105px;
-      left: 100px;
-      width: 80%;
-      color: white;
-      z-index: 10;
-      border: none;
-      background-color: transparent;
-      overflow-y: scroll;
-     height: 407px;
-  }
+}
 
-  .modal__close {
+.conteudo-modal {
+    display: none;
+    position: absolute;
+    top: 105px;
+    left: 100px;
+    width: 80%;
+    color: white;
+    z-index: 10;
+    border: none;
+    background-color: transparent;
+    overflow-y: scroll;
+    height: 407px;
+}
+
+.modal__close {
     display: none;
     position: absolute;
     top: 65px;
@@ -719,53 +739,67 @@ footer {
     border: none;
     background-color: transparent;
     border-bottom: 2px solid transparent;
-  }
-  .modal__close:hover, .modal__close:focus {
+}
+
+.modal__close:hover,
+.modal__close:focus {
     border-bottom-color: white;
-  }
-  
-  .modal--active .modal {
+}
+
+.modal--active .modal {
     width: 100%;
     height: 630px;
-  }
-  .modal--active .btn {
-    display: none;
-  }
-  .modal--active .modal__close {
-    display: block;
-  }
-  .modal--active .conteudo-modal {
-    display: block;
-  }
-  /* FIM - BOTAO ANIMADO COM SVG */
+}
 
-  /*COMUNICADO */
-  .comunicado {
+.modal--active .btn {
+    display: none;
+}
+
+.modal--active .modal__close {
+    display: block;
+}
+
+.modal--active .conteudo-modal {
+    display: block;
+}
+
+/* FIM - BOTAO ANIMADO COM SVG */
+
+/*COMUNICADO */
+.comunicado {
     background: rgba(0, 0, 0, 0.16);
     border-radius: 50px;
     padding: 2em;
     margin: 2em 2em 1em 2em;
-  }
+}
 
-  .destaque-1 {
+.destaque-1 {
     background: linear-gradient(to right, #ffffff 0%, #06bb9dc5 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  }
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-  .destaque-2 {
+.destaque-2 {
     background: linear-gradient(to right, #00000094 0%, #020003 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  }
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-  .destaque-3 {
+.destaque-3 {
     background: linear-gradient(to right, #660385 0%, #330867 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  }
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-  @media only screen and (max-width: 600px) {
+.subtitulo-convenio {
+    font-size: 1.5em;
+    color: white;
+    border: 9px solid;
+    margin: 0px 166px;
+    padding: 22px;
+}
+
+@media only screen and (max-width: 600px) {
 
     header {
         padding: 0;
@@ -783,21 +817,23 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
     }
+
     .sc-principal .texto {
         padding: 1em;
     }
 
-    .resumo-osteo, 
+    .resumo-osteo,
     .resumo-fisio {
         display: grid;
         grid-template-columns: 1fr;
     }
 
-    .sc-principal > header:nth-child(1) > img:nth-child(1) {
+    .sc-principal>header:nth-child(1)>img:nth-child(1) {
         width: 390px;
         margin-left: 1em;
         margin-top: 0.3em;
     }
+
     .efeito-quadrado {
         display: none;
     }
@@ -811,7 +847,7 @@ footer {
         padding-left: 1em;
         padding-right: 1em;
     }
-    
+
     .sc-tratamento-osteopatia {
         padding-left: 1em;
     }
@@ -826,7 +862,7 @@ footer {
         margin: 0;
     }
 
-    .modal { 
+    .modal {
         left: 0;
     }
 
@@ -841,8 +877,8 @@ footer {
 
     .titulo-profissional {
         font-size: 2em;
-        }
-    
+    }
+
     .imagem-profissional {
         margin-top: 4.3em;
         width: 100%;
@@ -857,7 +893,9 @@ footer {
     .caixa-endereco {
         font-size: 8px;
     }
-    .sc-contato, .wrapper-mensagem {
+
+    .sc-contato,
+    .wrapper-mensagem {
         display: inherit;
     }
 
@@ -883,4 +921,4 @@ footer {
         margin-left: 2em;
     }
 
-  }
+}
