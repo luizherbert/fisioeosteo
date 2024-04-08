@@ -809,6 +809,10 @@ path {
         display: none;
     }
 
+    button, .button {
+        width: 95%;
+    }
+
     .sc-principal {
         display: inherit;
     }
@@ -828,8 +832,14 @@ path {
         grid-template-columns: 1fr;
     }
 
+    header {
+        width: 100vw;
+    }
+
     .sc-principal>header:nth-child(1)>img:nth-child(1) {
-        width: 390px;
+        object-fit: cover; 
+        object-position: 5px 2px;
+        width: 187%;
         margin-left: 1em;
         margin-top: 0.3em;
     }
@@ -846,6 +856,7 @@ path {
         height: 100%;
         padding-left: 1em;
         padding-right: 1em;
+        padding-top: 1em;
     }
 
     .sc-tratamento-osteopatia {
@@ -860,6 +871,7 @@ path {
     .objetivos {
         grid-template-columns: 1fr;
         margin: 0;
+        padding: 0;
     }
 
     .modal {
