@@ -28,54 +28,74 @@ lnkProfissional.addEventListener("click", () => {
     gsap.to(window, {duration: 1, scrollTo: ".sc-profissional"});
 });
 
-/*-- ENVIAR EMAIL */
-const btnAvalicao = document.getElementById("btnAvalicao");
-const formEmail   = document.getElementById("formEmail");
+/*-- ENVIAR VIA WHATSAPP --*/
 
 btnAvalicao.addEventListener("click", async (e) => {
 	e.preventDefault();
 
-	//prepara form
 	const nome  	= document.getElementById("nome");
 	const email  	= document.getElementById("email");
 	const telefone  = document.getElementById("telefone");
 	const mensagem  = document.getElementById("mensagem");
 
-	mensagemEmail   = `O cliente ${nome.value} entrou em contato com os seguintes dados
-					   email: ${email.value}
-					   telefone: ${telefone.value}
-					   a seguinte mensagem: ${mensagem.value}`;
+	let mensagemWhats   = `Olá, sou ${nome.value}. Estou entrando em contato para uma avaliação.
+	\n Email: ${email.value} 
+	\n Telefone: ${telefone.value} 
+	\n Mensagem: ${mensagem.value}`;
 
-	var formdata = new FormData();
-	formdata.append("apikey", "96651B7405CA78EB018B83A1B07C2C2B7326342314B571E5478D5D8AF7BCCAD26155C128F6357AB70BD7E228299A58A2");
-	formdata.append("to", "solangesidney023@gmail.com");
-	formdata.append("from", "mestre0din@hotmail.com");
-	formdata.append("subject", "Contato via site");
-	formdata.append("bodyText", mensagemEmail);
-	
-	var requestOptions = {
-	  method: 'POST',
-	  body: formdata,
-	  redirect: 'follow'
-	};
-	
-	fetch("https://api.elasticemail.com/v2/email/send", requestOptions)
-	  .then((response) => { response.text(); 
-		nome.value = '';
-		email.value = '';
-		telefone.value = '';
-		mensagem.value = '';
-
-		btnAvalicao.innerHTML = 'Email enviado!';
-		btnAvalicao.disabled = true;
-	   })
-	  .then(result => console.log(result))
-	  .catch(error => console.log('error', error));
-	
-
-
-
+	window.location.href = `https://wa.me/5511963500980?text=${mensagemWhats}`;
 });
+
+
+/*-- ENVIAR EMAIL */
+// const btnAvalicao = document.getElementById("btnAvalicao");
+// const formEmail   = document.getElementById("formEmail");
+
+// btnAvalicao.addEventListener("click", async (e) => {
+// 	e.preventDefault();
+
+// 	//prepara form
+// 	const nome  	= document.getElementById("nome");
+// 	const email  	= document.getElementById("email");
+// 	const telefone  = document.getElementById("telefone");
+// 	const mensagem  = document.getElementById("mensagem");
+
+// 	mensagemEmail   = `O cliente ${nome.value} entrou em contato com os seguintes dados
+// 					   email: ${email.value}
+// 					   telefone: ${telefone.value}
+// 					   a seguinte mensagem: ${mensagem.value}`;
+
+// 	var formdata = new FormData();
+// 	formdata.append("apikey", "96651B7405CA78EB018B83A1B07C2C2B7326342314B571E5478D5D8AF7BCCAD26155C128F6357AB70BD7E228299A58A2");
+// 	formdata.append("to", "solangesidney023@gmail.com");
+// 	formdata.append("from", "mestre0din@hotmail.com");
+// 	formdata.append("subject", "Contato via site");
+// 	formdata.append("bodyText", mensagemEmail);
+	
+	
+// 	var requestOptions = {
+// 	  method: 'POST',
+// 	  body: formdata,
+// 	  redirect: 'follow'
+// 	};
+	
+// 	fetch("https://api.elasticemail.com/v2/email/send", requestOptions)
+// 	  .then((response) => { response.text(); 
+// 		nome.value = '';
+// 		email.value = '';
+// 		telefone.value = '';
+// 		mensagem.value = '';
+
+// 		btnAvalicao.innerHTML = 'Enviada Mensagem!';
+// 		btnAvalicao.disabled = true;
+// 	   })
+// 	  .then(result => console.log(result))
+// 	  .catch(error => console.log('error', error));
+	
+
+
+
+// });
 	
 
 /* BOTAO ANIMADO COM FRAME */
