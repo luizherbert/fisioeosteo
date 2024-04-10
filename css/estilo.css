@@ -832,6 +832,12 @@ path {
         grid-template-columns: 1fr;
     }
 
+    .img-osteo,
+    .img-fisio {
+        height: 250px;
+        width: 100%;
+    }
+
     header {
         width: 100vw;
     }
@@ -857,6 +863,10 @@ path {
         padding-left: 1em;
         padding-right: 1em;
         padding-top: 1em;
+    }
+
+    .sc-tratamento-fisioterapia {
+        padding: 4em 1em;
     }
 
     .sc-tratamento-osteopatia {
@@ -887,6 +897,12 @@ path {
         color: #FFF;
     }
 
+    .titulo {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
     .titulo-profissional {
         font-size: 2em;
     }
@@ -895,7 +911,8 @@ path {
         margin-top: 4.3em;
         width: 100%;
         background: #59B0D2;
-        padding: 2em;
+        padding: 1em;
+        filter: saturate(1.1);
     }
 
     .side-mensagem {
@@ -913,7 +930,7 @@ path {
 
     .fale-conosco {
         display: inherit;
-        margin: 0;
+        margin: 20px 0;
         padding-left: 0;
         height: 100%;
         width: 100%;
@@ -926,6 +943,23 @@ path {
 
     .caixa-mensagem {
         margin-top: 20px;
+    }
+
+    .caixa-endereco {
+        display: flex;
+        align-items: center;
+        border-top: 1px solid #7297769c;
+        border-bottom: 1px solid #7297769c;
+    }
+
+    .rodape-endereco-logradouro,
+    .rodape-telefone-logradouro {
+        gap: 1em;
+    }
+
+    .rodape-endereco-logradouro img, .rodape-telefone-logradouro img {
+        padding: 0;
+        
     }
 
     footer {
