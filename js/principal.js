@@ -43,7 +43,7 @@ btnAvalicao.addEventListener("click", async (e) => {
 	\n Telefone: ${telefone.value} 
 	\n Mensagem: ${mensagem.value}`;
 
-	window.location.href = `https://wa.me/5511963500980?text=${mensagemWhats}`;
+	window.location.href = `https://wa.me/5511932605455?text=${mensagemWhats}`;
 });
 
 
