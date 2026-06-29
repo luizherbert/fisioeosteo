@@ -902,6 +902,10 @@ path {
         gap: 1em;
     }
 
+    .informacoes-profissional > p {
+        line-height: 1em !important;
+    }
+
     .titulo-profissional {
         font-size: 2em;
     }

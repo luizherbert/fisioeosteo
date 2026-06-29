@@ -1,0 +1,42 @@
+# Arquivos de usuário do Visual Studio
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Pastas de Build e Publicação (geradas automaticamente)
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Resultados de pacotes
+[Pp]ackages/
+![Pp]ackages/build/
+nuget/
+*.nupkg
+
+# Configurações de banco de dados
+*.dbmdl
+*.jfm
+
+# Pastas e arquivos do Gerenciador de Pacotes do Visual Studio (VS Code e extensões)
+.vs/
+.vscode/
+
+# Ignorar o arquivo de backup local do Visual Studio
+*.bak
+
+# Arquivos do dotCover
+*.dotCover
