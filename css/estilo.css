@@ -1,5 +1,75 @@
+/* ==========================================================================
+   IMPORTS
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/* ==========================================================================
+   CSS VARIABLES
+   ========================================================================== */
+:root {
+    /* Colors - Primary */
+    --color-primary-cyan: #35B0CF;
+    --color-primary-teal: #29C3BE;
+    --color-primary-teal-light: #2AB1AD;
+    --color-primary-blue: #577ABC;
+    --color-primary-blue-light: #59B0D2;
+    --color-primary-indigo: #5D62B5;
+    --color-primary-purple: #330867;
+    
+    /* Colors - Secondary */
+    --color-secondary-green: #659922;
+    --color-secondary-coral: #F2726F;
+    --color-secondary-blue: #51A2DA;
+    
+    /* Colors - Neutral */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-dark-gray: #2e2e2e;
+    --color-light-gray: #dedede;
+    --color-footer-bar: #363740;
+    
+    /* Colors - Gradients */
+    --gradient-primary: linear-gradient(49.23deg, #35B0CF 44.88%, #577ABC 115.43%);
+    --gradient-text-highlight: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    --gradient-objective: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    --gradient-button: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
+    
+    /* Typography */
+    --font-family-primary: 'Montserrat', sans-serif;
+    --font-size-base: 1rem;
+    --font-size-xs: 1.2rem;
+    --font-size-sm: 1.5rem;
+    --font-size-md: 2rem;
+    --font-size-lg: 3rem;
+    --font-size-xl: 4rem;
+    --font-size-title: 32px;
+    
+    /* Spacing */
+    --spacing-xs: 0.3rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+    --spacing-2xl: 10rem;
+    
+    /* Layout */
+    --header-height: 55px;
+    --footer-height: 250px;
+    --border-radius-sm: 4px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 20px;
+    --border-radius-round: 50px;
+    --border-radius-pill: 1000px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-base: 0.3s all;
+    --transition-slow: 0.5s all;
+}
+
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
 html {
     box-sizing: border-box;
     font-size: 10px;
@@ -13,40 +83,80 @@ html {
 }
 
 ::placeholder {
-    color: white;
+    color: var(--color-white);
 }
-
 
 body {
-    margin: 0px;
-    background: #FFF;
-    color: #000;
-    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: var(--color-white);
+    color: var(--color-black);
+    font-family: var(--font-family-primary);
 }
 
-header {
-    background: #FFF;
-    height: 55px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-left: 2em;
-    padding-right: 2em;
-    z-index: 1000;
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+h1 {
+    color: var(--color-white);
+    font-size: var(--font-size-xl);
+}
+
+h2 {
+    font-size: var(--font-size-md);
+    color: var(--color-secondary-green);
+}
+
+h3 {
+    color: var(--color-white);
+    font-size: var(--font-size-md);
+    line-height: 1.6;
 }
 
 h4 {
     text-transform: uppercase;
-    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    background: var(--gradient-text-highlight);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.titulo {
+    font-size: var(--font-size-title);
+    color: var(--color-secondary-green);
+}
+
+/* ==========================================================================
+   LAYOUT - COMMON
+   ========================================================================== */
+section {
+    min-height: 100vh;
+    min-width: 100vw;
+    padding-left: var(--spacing-2xl);
+    padding-right: var(--spacing-2xl);
 }
 
 iframe {
     width: 100% !important;
 }
 
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+header {
+    background: var(--color-white);
+    height: var(--header-height);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+    z-index: 1000;
+}
+
 nav {
-    margin: 0em 0em 0 auto;
+    margin: 0 0 0 auto;
 }
 
 nav ul {
@@ -66,81 +176,39 @@ nav ul li a {
     text-decoration: none;
     cursor: pointer;
     padding: 1.8em;
-    font-size: 1.2em;
+    font-size: var(--font-size-xs);
+    position: relative;
 }
 
 nav ul li a::before {
     content: "";
     position: absolute;
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     border: 1px solid transparent;
-    transition: 0.5s all;
+    transition: var(--transition-slow);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 nav ul li a:hover::before {
-    content: "";
-    position: absolute;
     width: 80px;
     height: 1px;
-    background: #000;
-    color: #000;
-    border: 1px solid #000;
+    background: var(--color-black);
+    color: var(--color-black);
+    border: 1px solid var(--color-black);
 }
 
-h1 {
-    color: #FFF;
-    font-size: 4em;
-}
-
-h2 {
-    font-size: 2em;
-    color: #659922;
-}
-
-h3 {
-    color: #FFF;
-    font-size: 2em;
-    line-height: 1.6;
-}
-
-p {
-    line-height: 1.8;
-}
-
-.titulo {
-    font-size: 40px;
-    color: #659922;
-}
-
-section {
-    min-height: 100vh;
-    padding-left: 10rem;
-    padding-right: 10rem;
-}
-
-.fundo-sc1 {
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-
-}
-
-@supports (-ms-ime-align:auto) {
-    .fundo-sc1 {
-        margin-top: 60px;
-    }
-}
-
-/* SECAO PRINCIPAL */
-
+/* ==========================================================================
+   SECTION - PRINCIPAL (HERO)
+   ========================================================================== */
 .sc-principal {
     display: grid;
     padding-left: 0;
     padding-right: 0;
     font-size: 1em;
-    background: linear-gradient(49.23deg, #35B0CF 44.88%, #577ABC 115.43%);
+    background: var(--gradient-primary);
 }
 
 .sc-principal .wrapper-texto {
@@ -148,16 +216,32 @@ section {
     grid-template-columns: 2fr 1fr;
 }
 
-.sc-principal>header:nth-child(1)>img:nth-child(1) {
+.sc-principal > header:nth-child(1) > img:nth-child(1) {
     width: 390px;
     margin-left: 7em;
-    margin-top: 0.3em;
+    margin-top: var(--spacing-xs);
 }
 
 .sc-principal .texto {
     padding-left: 10em;
     padding-top: 4em;
     padding-right: 5em;
+}
+
+/* ==========================================================================
+   BACKGROUND ELEMENTS
+   ========================================================================== */
+.fundo-sc1 {
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+
+@supports (-ms-ime-align: auto) {
+    .fundo-sc1 {
+        margin-top: 60px;
+    }
 }
 
 .sc-tratamento-osteopatia {
@@ -170,18 +254,21 @@ section {
     background-size: cover;
 }
 
+/* ==========================================================================
+   DECORATIVE ELEMENTS
+   ========================================================================== */
 .quadrado {
     width: 20em;
     height: 20em;
 }
 
 .quadrado1 {
-    background-color: #2AB1AD;
+    background-color: var(--color-primary-teal-light);
     margin-top: 7em;
 }
 
 .quadrado2 {
-    background: #59B0D2;
+    background: var(--color-primary-blue-light);
     margin-left: 20em;
 }
 
@@ -209,7 +296,9 @@ section {
     width: 100%;
 }
 
-/* COMUM A TODAS AS SECTIONS*/
+/* ==========================================================================
+   OBJECTIVES SECTION
+   ========================================================================== */
 .objetivos {
     list-style: none;
     display: grid;
@@ -218,24 +307,23 @@ section {
     vertical-align: middle;
     grid-gap: 10px;
     margin: 50px 200px;
-
 }
 
 .objetivos li {
-    /* border: 1px solid #000; */
-    color: black;
-    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
-    /* background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,154,253,1) 100%); */
-    border-radius: 10px;
+    color: var(--color-black);
+    background: var(--gradient-objective);
+    border-radius: var(--border-radius-md);
     padding: 50px;
     display: flex;
     align-items: center;
 }
 
-/* SECAO OSTEOPATIA */
+/* ==========================================================================
+   SECTION - OSTEOPATIA
+   ========================================================================== */
 .sc-tratamento-osteopatia {
     display: grid;
-    background-color: #FFF;
+    background-color: var(--color-white);
     padding-left: 10em;
 }
 
@@ -248,174 +336,192 @@ section {
     color: #5D7FC0;
 }
 
-.osteopatia-texto,
-.fisioterapia-texto {
-    font-size: 2em;
+.osteopatia-texto {
+    font-size: var(--font-size-md);
     line-height: 1;
 }
 
-.img-osteo,
+.img-osteo {
+    height: 250px;
+    width: 300px;
+}
+
+.resumo-osteo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: var(--spacing-md) 0;
+}
+
+/* ==========================================================================
+   SECTION - FISIOTERAPIA
+   ========================================================================== */
+.sc-tratamento-fisioterapia {
+    display: grid;
+    background-color: var(--color-white);
+}
+
+.titulo-fisioterapia {
+    color: var(--color-primary-teal);
+}
+
+.fisioterapia-texto {
+    font-size: var(--font-size-md);
+    line-height: 1;
+}
+
 .img-fisio {
     height: 250px;
     width: 300px;
 }
 
-.resumo-osteo,
 .resumo-fisio {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin: 2em 0px;
+    margin: var(--spacing-md) 0;
 }
 
-
-/*  SECAO FISIOTERAPIA */
-.sc-tratamento-fisioterapia {
-    display: grid;
-    background-color: #FFF;
-}
-
-.titulo-fisioterapia {
-    color: #29C3BE;
-}
-
-/*  SECAO PROFISSIONAL */
+/* ==========================================================================
+   SECTION - PROFESSIONAL
+   ========================================================================== */
 .sc-profissional {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    color: #FFF;
-    background: linear-gradient(49.23deg, #35B0CF 44.88%, #577ABC 115.43%);
-    font-size: 2em;
-    /* background-image: url("../img/fundo-sc1.svg"); */
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    color: var(--color-white);
+    background: var(--gradient-primary);
+    font-size: var(--font-size-md);
 }
 
 .titulo-profissional {
     margin-top: 1.8em;
-    font-size: 3em;
-    color: #fff;
-}
-
-.crefito {
-    margin: 0.3em 0;
+    font-size: var(--font-size-lg);
+    color: var(--color-white);
 }
 
 .dados-profissional {
-    margin-right: 2em;
+    margin-right: var(--spacing-md);
+    width: 100%;
 }
 
 .wrapper-profissional {
     background: #5AD6C9;
-    margin: 3em auto;
+    margin: var(--spacing-lg) auto;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
 
 .nome-profissional {
-    font-size: 2em;
-    color: #FFF;
+    font-size: var(--font-size-md);
+    color: var(--color-white);
 }
 
 .crefito {
+    margin: var(--spacing-xs) 0;
     color: #317696;
 }
 
 .imagem-profissional {
-    margin-top: 4.3em;
+    margin-top: 2.3em;
     width: 20em;
-    background: #59B0D2;
-    padding: 2em;
+    background: var(--color-primary-blue-light);
+    padding: var(--spacing-md);
 }
 
-/*  SECAO LOCALIZACAO */
-#map {
-    height: 400px;
-    /* The height is 400 pixels */
-    width: 100%;
-    /* The width is the width of the web page */
-}
-
+/* ==========================================================================
+   SECTION - LOCATION
+   ========================================================================== */
 .sc-localizacao {
     display: grid;
-    background: #29C3BE;
+    background: var(--color-primary-teal);
     grid-template-columns: 1fr;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
 }
 
 .caixa-endereco {
     display: flex;
     align-items: center;
-
 }
 
 .caixa-endereco .endereco-logradouro {
-    font-size: 3em;
-    color: white;
-    margin-left: 3rem;
+    font-size: var(--font-size-lg);
+    color: var(--color-white);
+    margin-left: var(--spacing-lg);
 }
 
 .caixa-endereco .endereco-observacao {
-    font-size: 2em;
-    color: #5D62B5;
-    margin-left: 3rem;
+    font-size: var(--font-size-md);
+    color: var(--color-primary-indigo);
+    margin-left: var(--spacing-lg);
 }
 
-/* SECAO CONTATO */
-
+/* ==========================================================================
+   SECTION - CONTACT
+   ========================================================================== */
 .sc-contato {
     display: grid;
-    background: #29C3BE;
+    background: var(--color-primary-teal);
     grid-template-columns: 1fr;
     background-image: url("../img/contatobackground1.png");
 }
 
+.wrapper-mensagem {
+    margin-top: var(--spacing-lg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
+/* Contact Form */
 form fieldset {
     border: none;
     position: relative;
     margin-bottom: 1.2em;
 }
 
-input.btn-primary {
-    background-color: #51A2DA;
-    border-color: #51A2DA;
-}
-
 form fieldset input {
     padding: 25px 12px 6px 12px !important;
     height: 45px !important;
     box-shadow: none !important;
-    border: solid 1px #dedede !important;
+    border: solid 1px var(--color-light-gray) !important;
     width: 100%;
 }
 
 form fieldset label {
     position: absolute;
-    font-size: 2em;
+    font-size: var(--font-size-md);
     top: 13px;
     left: 20px;
-    color: #FFF;
+    color: var(--color-white);
     font-weight: 300;
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-
+    transition: var(--transition-fast);
 }
 
-form fieldset input:valid+label,
-form fieldset input:focus+label {
-    color: #51A2DA;
+form fieldset input:valid + label,
+form fieldset input:focus + label {
+    color: var(--color-secondary-blue);
     font-weight: 700;
     font-size: 12px;
-    -webkit-transform: translate3d(0, -10px, 0);
     transform: translate3d(0, -10px, 0);
 }
 
+input.btn-primary {
+    background-color: var(--color-secondary-blue);
+    border-color: var(--color-secondary-blue);
+}
+
+/* Message Box */
 .caixa-mensagem {
-    border-radius: 10px;
+    border-radius: var(--border-radius-md);
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1em;
-    background-color: #5D62B5;
+    background-color: var(--color-primary-indigo);
     max-width: 600px;
     max-height: 500px;
     padding: 15px;
@@ -423,30 +529,29 @@ form fieldset input:focus+label {
 }
 
 .caixa-mensagem input {
-    border: 1px solid white;
-    color: white;
-    background: #5D62B5;
-    border-radius: 4px;
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    background: var(--color-primary-indigo);
+    border-radius: var(--border-radius-sm);
     padding: 5px;
-    font-size: 2em;
-
+    font-size: var(--font-size-md);
 }
 
 .caixa-mensagem .caixa-titulo {
     margin-top: 1em;
-    color: white;
+    color: var(--color-white);
     text-align: center;
     font-weight: bold;
-    font-size: 3em;
+    font-size: var(--font-size-lg);
 }
 
 .caixa-mensagem button {
-    background: #F2726F;
-    color: white;
+    background: var(--color-secondary-coral);
+    color: var(--color-white);
     border: none;
     cursor: pointer;
-    transition: 0.3s all;
-    font-size: 2em;
+    transition: var(--transition-base);
+    font-size: var(--font-size-md);
 }
 
 .caixa-mensagem .btn-avaliacao {
@@ -458,40 +563,40 @@ form fieldset input:focus+label {
     background: rgba(122, 63, 112, 0.699);
 }
 
+/* Side Message */
 .side-mensagem {
-    color: white;
+    color: var(--color-white);
     text-align: center;
 }
 
 .side-titulo {
-    font-size: 3em;
+    font-size: var(--font-size-lg);
     font-weight: bold;
     margin-top: 1em;
 }
 
 .side-sub-titulo {
-    font-size: 2em;
+    font-size: var(--font-size-md);
     font-weight: bold;
     margin-top: 2.4em;
-
 }
 
+/* Contact Bar */
 .fale-conosco {
     display: flex;
     border: none;
     padding-left: 40px;
     text-align: center;
-    border-radius: 20px;
-    background: #5D62B5;
+    border-radius: var(--border-radius-lg);
+    background: var(--color-primary-indigo);
     height: 120px;
-    color: white;
-    font-size: 3em;
+    color: var(--color-white);
+    font-size: var(--font-size-lg);
     width: 750px;
     margin-top: -60px;
     margin-right: auto;
     margin-left: auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
 }
 
 .fale-conosco span {
@@ -504,32 +609,27 @@ form fieldset input:focus+label {
     margin-top: 20px;
     margin-left: 50px;
     display: inline-block;
-    transition: 0.3s all;
+    transition: var(--transition-base);
 }
 
 .icone-whatsapp:hover {
     transform: scale(1.2);
 }
 
-.wrapper-mensagem {
-    margin-top: 3em;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-/* RODAPE */
-
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
 footer {
-    background: #FFF;
-    height: 250px;
+    background: var(--color-white);
+    height: var(--footer-height);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 4em;
-    font-size: 1.5em;
+    font-size: var(--font-size-sm);
     line-height: 2.4;
     font-weight: bold;
-    margin-left: 10rem;
-    margin-top: 5rem;
+    margin-left: var(--spacing-2xl);
+    margin-top: var(--spacing-xl);
 }
 
 .rodape-logo {
@@ -538,10 +638,9 @@ footer {
 }
 
 .rodape-barra {
-    background: #363740;
-    margin-left: -10rem;
+    background: var(--color-footer-bar);
+    margin-left: calc(-1 * var(--spacing-2xl));
     grid-area: 2 / 1 / last-line / last-column;
-
 }
 
 .rodape-endereco-logradouro,
@@ -561,34 +660,33 @@ footer {
 .rodape-icones-rede-social {
     height: 48px;
     width: 48px;
-    transition: 0.3s all;
+    transition: var(--transition-base);
 }
 
 .rodape-icones-rede-social:hover {
     transform: scale(1.2);
-    color: blue;
     filter: invert(55%) sepia(52%) saturate(3303%) hue-rotate(158deg) brightness(90%) contrast(101%);
-
 }
 
-/* BOTÃO ANIMADO */
-
-
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+/* Animated Button */
 .button {
-    margin-top: 2em;
+    margin-top: var(--spacing-md);
     min-width: 300px;
     min-height: 60px;
     font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 1.3px;
     font-weight: 700;
-    color: #FFF;
+    color: var(--color-white);
     background: #4FD1C5;
-    background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
+    background: var(--gradient-button);
     border: none;
-    border-radius: 1000px;
-    box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
-    transition: all 0.3s ease-in-out 0s;
+    border-radius: var(--border-radius-pill);
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+    transition: var(--transition-base);
     cursor: pointer;
     outline: none;
     position: relative;
@@ -597,27 +695,27 @@ footer {
 
 .button::before {
     content: '';
-    border-radius: 1000px;
+    border-radius: var(--border-radius-pill);
     min-width: calc(300px + 12px);
     min-height: calc(60px + 12px);
     border: 6px solid #00FFCB;
-    box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+    box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: all .3s ease-in-out 0s;
+    transition: var(--transition-base);
 }
 
 .button:hover,
 .button:focus {
-    color: white;
+    color: var(--color-white);
     transform: translateY(-6px);
 }
 
 .button:hover::before,
-button:focus::before {
+.button:focus::before {
     opacity: 1;
 }
 
@@ -637,7 +735,7 @@ button:focus::before {
 }
 
 .button:hover::after,
-button:focus::after {
+.button:focus::after {
     animation: none;
     display: none;
 }
@@ -648,7 +746,6 @@ button:focus::after {
         height: 30px;
         opacity: 1;
     }
-
     100% {
         width: 300px;
         height: 300px;
@@ -656,19 +753,18 @@ button:focus::after {
     }
 }
 
-/* BOTAO ANIMADO COM SVG */
-
+/* SVG Animated Button */
 .btn--show-overlay a {
-    color: #2e2e2e;
+    color: var(--color-dark-gray);
     text-decoration: none;
     display: block;
     padding: 4px 8px;
-    transition: color .25s ease-out;
+    transition: color 0.25s ease-out;
 }
 
 .btn--show-overlay a:hover,
-a:focus {
-    color: #FFF;
+.btn--show-overlay a:focus {
+    color: var(--color-white);
 }
 
 .btn {
@@ -687,7 +783,7 @@ a:focus {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
+    top: -15px;
     left: 0;
 }
 
@@ -698,17 +794,17 @@ a:focus {
 }
 
 path {
-    fill: #2e2e2e;
-    stroke: #2e2e2e;
+    fill: var(--color-dark-gray);
+    stroke: var(--color-dark-gray);
     stroke-width: 1px;
 }
 
+/* Modal */
 .modal {
     position: relative;
     margin: 0 auto;
     width: 250px;
     height: 105px;
-    -webkit-transition: height 0.6s, width 0.6s;
     transition: height 0.6s, width 0.6s;
     left: 23px;
     z-index: 0;
@@ -721,7 +817,7 @@ path {
     top: 105px;
     left: 100px;
     width: 80%;
-    color: white;
+    color: var(--color-white);
     z-index: 10;
     border: none;
     background-color: transparent;
@@ -734,7 +830,7 @@ path {
     position: absolute;
     top: 65px;
     right: 85px;
-    color: white;
+    color: var(--color-white);
     z-index: 10;
     border: none;
     background-color: transparent;
@@ -743,7 +839,7 @@ path {
 
 .modal__close:hover,
 .modal__close:focus {
-    border-bottom-color: white;
+    border-bottom-color: var(--color-white);
 }
 
 .modal--active .modal {
@@ -763,18 +859,18 @@ path {
     display: block;
 }
 
-/* FIM - BOTAO ANIMADO COM SVG */
-
-/*COMUNICADO */
+/* ==========================================================================
+   HIGHLIGHTS & BADGES
+   ========================================================================== */
 .comunicado {
     background: rgba(0, 0, 0, 0.16);
-    border-radius: 50px;
-    padding: 2em;
-    margin: 2em 2em 1em 2em;
+    border-radius: var(--border-radius-round);
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) var(--spacing-md) var(--spacing-sm);
 }
 
 .destaque-1 {
-    background: linear-gradient(to right, #ffffff 0%, #06bb9dc5 100%);
+    background: linear-gradient(to right, var(--color-white) 0%, #06bb9dc5 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -786,33 +882,52 @@ path {
 }
 
 .destaque-3 {
-    background: linear-gradient(to right, #660385 0%, #330867 100%);
+    background: linear-gradient(to right, #660385 0%, var(--color-primary-purple) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .subtitulo-convenio {
-    font-size: 1.5em;
-    color: white;
+    font-size: var(--font-size-sm);
+    color: var(--color-white);
     border: 9px solid;
     margin: 0px 166px;
     padding: 22px;
 }
 
+/* ==========================================================================
+   RESPONSIVE - MOBILE (max-width: 600px)
+   ========================================================================== */
 @media only screen and (max-width: 600px) {
-
     header {
         padding: 0;
+        width: 100vw;
+    }
+
+    body {
+        width: 100% !important;
     }
 
     nav {
         display: none;
     }
 
-    button, .button {
+    button,
+    .button {
         width: 95%;
     }
 
+    .onda {
+        display: none;
+    }
+
+    section {
+        height: 100%;
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
+    }
+
+    /* Principal */
     .sc-principal {
         display: inherit;
     }
@@ -824,6 +939,24 @@ path {
 
     .sc-principal .texto {
         padding: 1em;
+    }
+
+    .sc-principal > header:nth-child(1) > img:nth-child(1) {
+        object-fit: cover;
+        object-position: 5px 2px;
+        width: 187%;
+        margin-left: 1em;
+        margin-top: var(--spacing-xs);
+    }
+
+    /* Treatment Sections */
+    .sc-tratamento-osteopatia {
+        padding-left: var(--spacing-sm);
+    }
+
+    .sc-tratamento-fisioterapia {
+        padding: var(--spacing-sm);
+        width: 100vw;
     }
 
     .resumo-osteo,
@@ -838,62 +971,21 @@ path {
         width: 100%;
     }
 
-    header {
-        width: 100vw;
-    }
-
-    .sc-principal>header:nth-child(1)>img:nth-child(1) {
-        object-fit: cover; 
-        object-position: 5px 2px;
-        width: 187%;
-        margin-left: 1em;
-        margin-top: 0.3em;
-    }
-
-    .efeito-quadrado {
-        display: none;
-    }
-
+    /* Decorative */
+    .efeito-quadrado,
     .icone-circulo {
         display: none;
     }
 
-    section {
-        height: 100%;
-        padding-left: 1em;
-        padding-right: 1em;
-    }
-
-    .sc-tratamento-fisioterapia {
-        padding: 4em 1em;
-    }
-
-    .sc-tratamento-osteopatia {
-        padding-left: 1em;
-    }
-
+    /* Professional */
     .sc-profissional {
         display: inherit;
         height: 100%;
     }
 
-    .objetivos {
-        grid-template-columns: 1fr;
-        margin: 0;
-        padding: 0;
-    }
-
-    .modal {
-        left: 0;
-    }
-
-    .conteudo-modal {
-        left: 14%;
-    }
-
     .nome-profissional {
         font-size: 1em;
-        color: #FFF;
+        color: var(--color-white);
     }
 
     .titulo {
@@ -907,23 +999,37 @@ path {
     }
 
     .titulo-profissional {
-        font-size: 2em;
+        text-align: center;
     }
 
+
     .imagem-profissional {
-        margin-top: 4.3em;
+        margin-top: 1.3em;
         width: 100%;
-        background: #59B0D2;
-        padding: 1em;
+        background: var(--color-primary-blue-light);
+        padding: var(--spacing-sm);
         filter: saturate(1.1);
     }
 
-    .side-mensagem {
-        display: none;
+    /* Objectives */
+    .objetivos {
+        grid-template-columns: 1fr;
+        margin: 0;
+        padding: 0;
     }
 
-    .caixa-endereco {
-        font-size: 8px;
+    /* Modal */
+    .modal {
+        left: 0;
+    }
+
+    .conteudo-modal {
+        left: 14%;
+    }
+
+    /* Contact */
+    .side-mensagem {
+        display: none;
     }
 
     .sc-contato,
@@ -940,34 +1046,37 @@ path {
     }
 
     .icone-whatsapp {
-        margin-top: 0px;
-        margin-left: 0px;
+        margin-top: 0;
+        margin-left: 0;
     }
 
     .caixa-mensagem {
         margin-top: 20px;
     }
 
+    /* Location */
     .caixa-endereco {
+        font-size: 8px;
         display: flex;
         align-items: center;
         border-top: 1px solid #7297769c;
         border-bottom: 1px solid #7297769c;
     }
 
+    /* Footer */
     .rodape-endereco-logradouro,
     .rodape-telefone-logradouro {
         gap: 1em;
     }
 
-    .rodape-endereco-logradouro img, .rodape-telefone-logradouro img {
+    .rodape-endereco-logradouro img,
+    .rodape-telefone-logradouro img {
         padding: 0;
-        
     }
 
     footer {
         display: block;
-        margin-left: 2em;
+        margin-left: var(--spacing-md);
     }
-
 }
+
